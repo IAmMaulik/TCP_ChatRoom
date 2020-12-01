@@ -26,5 +26,5 @@ def handle(client):
             clients.remove(client)
             client.close()
             nkname = nicknames[index]
-            print(f"{nkname} has left the chat!")
+            print(f"{nkname} has left the chat!".encode('ascii'))
             nicknames.remove[nkname]
