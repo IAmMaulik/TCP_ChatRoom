@@ -18,3 +18,14 @@ def recieve():
             print("An unknown error occurred")
             client.close()
             break
+
+def write():
+    while True:
+        message = f'{nickname}: {input("")}'
+        client.send(message)
+
+recieve_thread = threading.Thread(target=recieve)
+recieve_thread.start()
+
+write_thread = threading.Thread(target=write)
+write_thread.start()
